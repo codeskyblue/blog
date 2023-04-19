@@ -83,7 +83,7 @@ npm run server
 创建新的 Github Token [https://github.com/settings/tokens/new](https://github.com/settings/tokens/new)
 ![](/images/FuHmcy1LtNsX_ydNAM9ttfwNVUJ-.png)
 
-另外项目的 Workflow 的权限也要赋予一下，不然不能自动 Com 想·xmit And Push
+另外项目的 Workflow 的权限也要赋予一下，不然不能自动 Commit And Push
 ![](/images/FhODs8YgBhM-crA9Wsg6PVMpupTw.png)
 
 # 遗留问题
