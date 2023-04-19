@@ -206,10 +206,10 @@ donates:
         qrcode: ''
 # Share plugin configurations
 # https://ppoffice.github.io/hexo-theme-icarus/categories/Plugins/Share/
-share:
-    type: sharethis
-    # URL to the ShareThis share plugin script
-    install_url: ''
+# share:
+#     type: sharethis
+#     # URL to the ShareThis share plugin script
+#     install_url: 'https://platform-api.sharethis.com/js/sharethis.js#property=643f8fedb122060019c95582&product=inline-share-buttons'
 # Sidebar configurations.
 # Please be noted that a sidebar is only visible when it has at least one widget
 sidebar:
@@ -244,22 +244,25 @@ widgets:
         # URL or path for the follow button
         follow_link: https://github.com/codeskyblue
         # Links to be shown on the bottom of the profile widget
-        social_links:
-            Github:
-                icon: fab fa-github
-                url: https://github.com/codeskyblue
-            # Facebook:
-            #     icon: fab fa-facebook
-            #     url: https://facebook.com
-            # Twitter:
-            #     icon: fab fa-twitter
-            #     url: https://twitter.com
-            # Dribbble:
-            #     icon: fab fa-dribbble
-            #     url: https://dribbble.com
-            RSS:
-                icon: fas fa-rss
-                url: /
+        # social_links:
+        #     Testerhome:
+        #         icon: fab fa-vials
+        #         url: https://testerhome.com/codeskyblue
+        #     Github:
+        #         icon: fab fa-github
+        #         url: https://github.com/codeskyblue
+        #     # Facebook:
+        #     #     icon: fab fa-facebook
+        #     #     url: https://facebook.com
+        #     # Twitter:
+        #     #     icon: fab fa-twitter
+        #     #     url: https://twitter.com
+        #     # Dribbble:
+        #     #     icon: fab fa-dribbble
+        #     #     url: https://dribbble.com
+        #     RSS:
+        #         icon: fas fa-rss
+        #         url: /
     # Table of contents widget configurations
     -
         # Where should the widget be placed, left sidebar or right sidebar
@@ -278,8 +281,8 @@ widgets:
         type: links
         # Names and URLs of the sites
         links:
-            Hexo: https://hexo.io
-            Bulma: https://bulma.io
+            Chat: https://chat.codeskyblue.xyz
+            Testerhome: https://testerhome.com/codeskyblue
     # Categories widget configurations
     -
         # Where should the widget be placed, left sidebar or right sidebar
