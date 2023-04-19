@@ -1,6 +1,6 @@
 ---
 title: Hello World 2
-urlname: ymkidbya6wlc8p19
+urlname: hello-world-2
 date: '2023-04-17 22:08:22 +0800'
 tags: []
 categories: []

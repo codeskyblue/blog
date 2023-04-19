@@ -7,7 +7,7 @@ language: zh-CN
 timezone: ''
 favicon: favicon.png
 url: https://blog.codeskyblue.xyz
-permalink: ':year/:month/:day/:title/'
+permalink: ':year/:month/:day/:urlname/'
 permalink_defaults: null
 pretty_urls:
   trailing_index: true
