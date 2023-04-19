@@ -1,19 +1,20 @@
 ---
-title: 语雀文档自动更新个人静态网站
+title: 语雀文档同步到个人Blog
 urlname: any1s4wcvpwonlsa
 date: '2023-04-18 23:02:46 +0800'
 tags: []
 categories: []
 ---
 
-# 大纲
+# 背景
 
-- Github 项目建个名叫 blog 的项目
-- DigitalOcean 平台（提供 3 个免费的静态网站、基本用不完的 FAAS 服务）
+之前我也曾搞过个人 blog，体验过很多，比如 hugo，hexo，oschina 上的 blog，testerhome 博客，知乎个人空间。但是都有点不太满意其中的编写阶段。要么是需要用编辑器写 markdown，要么就是得登录网站写，像知乎发个文章还得审核。自从见到了 yuque-hexo 项目，我才有点感觉自己这个 blog 的春天来了。语雀用起来的体验是我用过的所有编辑器里面体验最好的，既可以网页修改，也可以装客户端（手机、PC 都有），最关键的时候还支持 markdown。通过 yuque-hexo 项目能快速的将语雀的文档导入到 hexo 项目中，然后直接生成 html 静态网站，简直不能再方便。下面就讲讲我是如何配置的。
 
-# Hexo 项目配置
+> 不过也有不好的一点，就是快要收费了，价格还不低。希望语雀能够认清现实，不然我就跑了。
 
-因为改了很多东西，为了方便，可以直接[fork 我的项目](https://github.com/codeskyblue/blog/fork)
+# 教程
+
+因为改了很多东西，为了方便，可以直接[fork 我的项目 codeskyblue/hexo-blog-template](https://github.com/codeskyblue/hexo-blog-template/fork)
 Fork 完之后，git clone 到本地
 
 1. 修改配置文件 `_config.yml`中的 title, author, url 字段，改成自己的
@@ -56,7 +57,7 @@ npm run sync
 
 看一下控制台输出，如果有报错，根据报错在谷歌百度或者[chatgpt](https://chat.codeskyblue.xyz)一下。
 
-接下来可以预览一下效果了
+接下来可以预览一下效果了（命令运行完后会自动打开一个网站）
 
 ```bash
 npm run server
@@ -68,6 +69,10 @@ npm run server
 我目前是 digitalocean 上建了一个静态网站，关联了 Github 项目，直接一 push 就会自动部署。这个应该比较简单了，具体步骤就不写了。
 
 我目前的博客地址 [https://blog.codeskyblue.xyz](https://blog.codeskyblue.xyz) 欢迎常来看看
+
+---
+
+后面的内容就可以不看了，都是我没有试验通过的。感兴趣的可以看别的博主的实践。
 
 # 通过语雀 webhook 自动更新 blog(未完）
 
@@ -85,5 +90,4 @@ npm run server
 
 1. 语雀的 webhook 好像没用
 2. github 的 action 插件 Git commit and push，也没看到 push
-3. DigitalOcean 上的根据 github 的变更自动 build 也不是很及时
-4. 腾讯[COS](https://console.cloud.tencent.com/cos/bucket)配置（看起来还需要备案，懒得搞了）
+3. 腾讯[COS](https://console.cloud.tencent.com/cos/bucket)配置（看起来还需要备案，懒得搞了）
