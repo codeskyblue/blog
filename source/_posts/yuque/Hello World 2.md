@@ -4,6 +4,7 @@ urlname: ymkidbya6wlc8p19
 date: '2023-04-17 22:08:22 +0800'
 tags: []
 categories: []
+toc: true
 ---
 
 This is new `post`

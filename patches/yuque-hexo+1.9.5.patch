@@ -1,3 +1,32 @@
+diff --git a/node_modules/yuque-hexo/adapter/hexo.js b/node_modules/yuque-hexo/adapter/hexo.js
+index b42469a..9422c21 100644
+--- a/node_modules/yuque-hexo/adapter/hexo.js
++++ b/node_modules/yuque-hexo/adapter/hexo.js
+@@ -35,7 +35,7 @@ function parseMatter(body) {
+   body = entities.decode(body);
+   try {
+     // front matter信息的<br/>换成 \n
+-    const regex = /(title:|layout:|tags:|date:|categories:){1}(\S|\s)+?---/gi;
++    const regex = /(title:|layout:|tags:|date:|categories:|toc:){1}(\S|\s)+?---/gi;
+     body = body.replace(regex, a =>
+       a.replace(/(<br \/>|<br>|<br\/>)/gi, '\n')
+     );
+@@ -76,6 +76,7 @@ module.exports = async function(post) {
+   const date = data.date || formatDate(created_at);
+   const tags = data.tags || [];
+   const categories = data.categories || [];
++  const toc = data.toc || true;
+   const props = {
+     title: title.replace(/"/g, ''), // 临时去掉标题中的引号，至少保证文章页面是正常可访问的
+     urlname,
+@@ -83,6 +84,7 @@ module.exports = async function(post) {
+     ...data,
+     tags,
+     categories,
++    toc,
+   };
+   const text = ejs.render(template, {
+     raw,
 diff --git a/node_modules/yuque-hexo/util/imageBeds/index.js b/node_modules/yuque-hexo/util/imageBeds/index.js
 index 4af4909..9cac9a3 100644
 --- a/node_modules/yuque-hexo/util/imageBeds/index.js
