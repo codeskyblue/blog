@@ -1,6 +1,6 @@
 ---
 title: ChatGPT账单
-urlname: pb8o3vo179u1wdf7
+urlname: chatgpt-bill
 date: '2023-04-13 11:12:24 +0800'
 tags: []
 categories: []
