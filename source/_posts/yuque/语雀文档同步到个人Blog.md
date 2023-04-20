@@ -16,6 +16,8 @@ toc: true
 
 # 教程
 
+<!-- more -->
+
 因为改了很多东西，为了方便，可以直接[fork 我的项目 codeskyblue/hexo-blog-template](https://github.com/codeskyblue/hexo-blog-template/fork)
 Fork 完之后，git clone 到本地
 
