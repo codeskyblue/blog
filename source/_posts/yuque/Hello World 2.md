@@ -2,10 +2,15 @@
 title: Hello World 2
 urlname: hello-world-2
 date: '2023-04-17 22:08:22 +0800'
+draft: true
 tags: []
 categories: []
 toc: true
 ---
+
+预览内容在这里写
+
+<!-- more -->
 
 This is new `post`
 测试下划线 _underline_
@@ -14,10 +19,3 @@ This is new `post`
 import os
 print("I'm in", os.getcwd())
 ```
-
-# 总结 2456
-
-好，非常的好。
-飞船 📈 ☺
-
-![](/images/yuque/FnrmR43hkxwc847WRiAaIWim_TCO.jpeg)

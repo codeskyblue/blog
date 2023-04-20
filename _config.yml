@@ -60,6 +60,11 @@ pagination_dir: page
 include: null
 exclude: null
 ignore: null
-theme: icarus
+theme: next
 deploy:
   type: ''
+search:
+  path: search.xml
+  field: post
+  content: true
+  format: html
