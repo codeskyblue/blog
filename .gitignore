@@ -10,3 +10,4 @@ yuque.json
 public/
 *.pyc
 __pycache__/
+*.swp
