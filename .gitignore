@@ -8,3 +8,5 @@ _multiconfig.yml
 yuque.json
 .env
 public/
+*.pyc
+__pycache__/
