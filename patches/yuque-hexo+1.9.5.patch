@@ -55,10 +55,10 @@ index 4af4909..9cac9a3 100644
      }
 diff --git a/node_modules/yuque-hexo/util/imageBeds/local.js b/node_modules/yuque-hexo/util/imageBeds/local.js
 new file mode 100644
-index 0000000..9224ee4
+index 0000000..ace4450
 --- /dev/null
 +++ b/node_modules/yuque-hexo/util/imageBeds/local.js
-@@ -0,0 +1,45 @@
+@@ -0,0 +1,48 @@
 +'use strict';
 +
 +const out = require('../../lib/out');
@@ -67,6 +67,8 @@ index 0000000..9224ee4
 +class LocalClient {
 +    constructor(config) {
 +        this.config = config;
++        this.prefixKey = (config.prefixKey || "images").replace(/\/$/, '')
++        this.imgDir = `${process.cwd()}/source/${this.prefixKey}`
 +    }
 +
 +    static getInstance(config) {
@@ -76,12 +78,14 @@ index 0000000..9224ee4
 +        return this.instance;
 +    }
 +
++    makeUrl(fileName) {
++        return `/${this.prefixKey}/${fileName}`;
++    }
++
 +    async hasImage(fileName) {
 +        try {
-+            const cwd = process.cwd();
-+            const imgDir = `${cwd}/source/images`
-+            const imgUrl = `/images/${fileName}`
-+            if (fs.existsSync(`${imgDir}/${fileName}`)) {
++            const imgUrl = this.makeUrl(fileName)
++            if (fs.existsSync(`${this.imgDir}/${fileName}`)) {
 +                return imgUrl
 +            }
 +        } catch(e) {
@@ -90,12 +94,11 @@ index 0000000..9224ee4
 +    }
 +
 +    async uploadImg(imgBuffer, fileName) {
-+        const imgDir = `${process.cwd()}/source/images`
-+        const imgPath = `${imgDir}/${fileName}`
-+        const imgUrl = `/images/${fileName}`
++        const imgPath = `${this.imgDir}/${fileName}`
++        const imgUrl = this.makeUrl(fileName)
 +
-+        if (!fs.existsSync(imgDir)) {
-+            fs.mkdirSync(imgDir)
++        if (!fs.existsSync(this.imgDir)) {
++            fs.mkdirSync(this.imgDir)
 +        }
 +        
 +        fs.writeFileSync(imgPath, imgBuffer)
