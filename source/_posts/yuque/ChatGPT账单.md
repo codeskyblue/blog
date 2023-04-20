@@ -16,4 +16,4 @@ toc: true
 | 202304   | depay 信用卡   | $1             | 月费$1/月                  |
 
 4 月使用量
-![](/images/Fhyem9Oyi_2vpDrWkCW1u2SuIa0R.png)
+![](/images/yuque/Fhyem9Oyi_2vpDrWkCW1u2SuIa0R.png)

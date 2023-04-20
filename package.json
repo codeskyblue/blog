@@ -49,7 +49,7 @@
       "host": "//rt9lv4f0y.hd-bkt.clouddn.com",
       "bucket": "blog71",
       "region": "",
-      "prefixKey": "images"
+      "prefixKey": "images/yuque"
     }
   },
   "devDependencies": {

@@ -20,4 +20,4 @@ print("I'm in", os.getcwd())
 好，非常的好。
 飞船 📈 ☺
 
-![](/images/FnrmR43hkxwc847WRiAaIWim_TCO.jpeg)
+![](/images/yuque/FnrmR43hkxwc847WRiAaIWim_TCO.jpeg)

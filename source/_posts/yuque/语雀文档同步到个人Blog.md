@@ -24,9 +24,9 @@ Fork 完之后，git clone 到本地
 
 ## 获取 YUQUE_TOKEN
 
-![](/images/Frc9TbxcBhlaeQHma7FmvLOdLZ9Y.png)
+![](/images/yuque/Frc9TbxcBhlaeQHma7FmvLOdLZ9Y.png)
 然后点击下面的 Token 就能获取了
-![](/images/Fux9lAfHUTXLc1XQUm1G4AO7G6Ou.png)
+![](/images/yuque/Fux9lAfHUTXLc1XQUm1G4AO7G6Ou.png)
 
 > 看起来还需要超级会员（目前看到的价格是 299/年）还不便宜，因为以前创建过所有就直接用以前创建的
 
@@ -43,9 +43,9 @@ set YUQUE_TOKEN=xxxx
 ## 获取语雀账户名和知识库地址
 
 下面两个是要修改的东西 （文件路径 package.json)
-![](/images/FpNw6b4nrhfc--TIWmBA0mWoR6JV.png)
+![](/images/yuque/FpNw6b4nrhfc--TIWmBA0mWoR6JV.png)
 直接点击这里
-![](/images/FnhxsvXwrm2KzS2r5hCnDzZ-4tpp.png)
+![](/images/yuque/FnhxsvXwrm2KzS2r5hCnDzZ-4tpp.png)
 直接进入你要看的知识库，然后其中的 URL 就是要提取的信息
 比如我的 [https://www.yuque.com/codeskyblue/blog](https://www.yuque.com/codeskyblue/blog)
 其中 login 是 codeskyblue，repo 是 blog
@@ -83,10 +83,10 @@ npm run server
 ## 创建 github token
 
 创建新的 Github Token [https://github.com/settings/tokens/new](https://github.com/settings/tokens/new)
-![](/images/FuHmcy1LtNsX_ydNAM9ttfwNVUJ-.png)
+![](/images/yuque/FuHmcy1LtNsX_ydNAM9ttfwNVUJ-.png)
 
 另外项目的 Workflow 的权限也要赋予一下，不然不能自动 Commit And Push
-![](/images/FhODs8YgBhM-crA9Wsg6PVMpupTw.png)
+![](/images/yuque/FhODs8YgBhM-crA9Wsg6PVMpupTw.png)
 
 # 遗留问题
 
