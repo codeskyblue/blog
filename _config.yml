@@ -60,7 +60,8 @@ pagination_dir: page
 include: null
 exclude: null
 ignore: null
-theme: next
+#theme: next
+theme: icarus
 deploy:
   type: ''
 search:
