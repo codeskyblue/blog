@@ -9,10 +9,16 @@ toc: true
 
 # 代理网站
 
+国内
+
 - 博主自己写的 [https://chat.codeskyblue.xyz](https://chat.codeskyblue.xyz)
+- 小莓用（偶尔抽风） [http://ai.useless.com/](http://ai.useless.com/)
+- 大脑助理（微信登录） [https://assistant.ruoguedu.com/chat/](https://assistant.ruoguedu.com/chat/)
+
+下面的需要翻墙
+
 - BAI Chat [https://chatbot.theb.ai/](https://chatbot.theb.ai/)
 - FreeGPT [https://freegpt.one/](https://freegpt.one/)
-- 小莓用（偶尔抽风） [http://ai.useless.com/](http://ai.useless.com/)
 - 需要提供自己的 API KEY [https://niek.github.io/chatgpt-web/](https://niek.github.io/chatgpt-web/)
 
 其他一些人收集的列表
