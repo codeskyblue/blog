@@ -108,7 +108,7 @@ navbar:
     menu:
         Home: /
         Archives: /archives
-        # Categories: /categories
+        Categories: /categories
         # Tags: /tags
         ChatGPT: https://chat.codeskyblue.xyz
     # Links to be shown on the right of the navigation bar
