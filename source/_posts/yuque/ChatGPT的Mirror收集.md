@@ -31,6 +31,11 @@ toc: true
 [https://github.com/Yidadaa/ChatGPT-Next-Web](https://github.com/Yidadaa/ChatGPT-Next-Web)
 ![](/images/yuque/FjTj9zGBsZV9d9G3tFkiuHfTWkXK.png)
 
+## ChatGPT-WEB
+
+[https://github.com/Chanzhaoyu/chatgpt-web](https://github.com/Chanzhaoyu/chatgpt-web)
+![](/images/yuque/Fpbg4Oo6X8WSM9Fi9PDZ1LEVBba4.png)
+
 ## ChatHub (Chrome 插件）
 
 - [https://github.com/chathub-dev/chathub](https://github.com/chathub-dev/chathub)
