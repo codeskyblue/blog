@@ -110,7 +110,7 @@ navbar:
         Archives: /archives
         Categories: /categories
         # Tags: /tags
-        ChatGPT: https://chat.codeskyblue.xyz
+        ChatGPT: https://chat.devsleep.com
     # Links to be shown on the right of the navigation bar
     links:
         Download on GitHub:
@@ -260,7 +260,7 @@ widgets:
         type: links
         # Names and URLs of the sites
         links:
-            Chat: https://chat.codeskyblue.xyz
+            Chat: https://chat.devsleep.com
             Testerhome: https://testerhome.com/codeskyblue
     # Categories widget configurations
     -
