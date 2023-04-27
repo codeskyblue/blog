@@ -17,3 +17,9 @@ toc: true
 
 4 月使用量
 ![](/images/yuque/Fhyem9Oyi_2vpDrWkCW1u2SuIa0R.png)
+
+# 打赏记录
+
+| 时间       | From | ￥   |
+| ---------- | ---- | ---- |
+| 2023-04-26 | chau | 1.66 |
