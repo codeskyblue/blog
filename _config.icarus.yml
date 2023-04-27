@@ -215,11 +215,11 @@ widgets:
         # Author's current location
         location: Hangzhou
         # URL or path to the avatar image
-        avatar: 
+        avatar: /images/avatar.jpg
         # Whether show the rounded avatar image
         avatar_rounded: true
         # Email address for the Gravatar
-        gravatar: codeskyblue@gmail.com
+        gravatar: #codeskyblue@gmail.com
         # URL or path for the follow button
         follow_link: https://github.com/codeskyblue
         # Links to be shown on the bottom of the profile widget
@@ -398,6 +398,6 @@ providers:
     # Name or URL template of the JavaScript and/or stylesheet CDN provider
     cdn: loli #jsdelivr
     # Name or URL template of the webfont CDN provider
-    fontcdn: ustc #loli #google
+    fontcdn: loli #google
     # Name or URL of the fontawesome icon font CDN provider
     iconcdn: loli #fontawesome
