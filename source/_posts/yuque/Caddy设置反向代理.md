@@ -1,0 +1,41 @@
+---
+title: Caddy设置反向代理
+urlname: bfza8bkx6884y40t
+date: '2023-04-28 10:50:16 +0800'
+tags:
+  - caddy
+categories: []
+toc: true
+---
+
+# 简介
+
+caddy 是使用 go 语言实现的一个高性能的类似于 nginx 的 HTTP 和反向代理服务器。支持自动申请 https 证书，配置也相当的精简
+官网：[https://caddyserver.com/](https://caddyserver.com/)
+
+# 代理服务器配置
+
+caddy 的文档主要都是英文的
+[https://caddyserver.com/docs/quick-starts/reverse-proxy](https://caddyserver.com/docs/quick-starts/reverse-proxy)
+[https://caddyserver.com/docs/caddyfile/directives/reverse_proxy](https://caddyserver.com/docs/caddyfile/directives/reverse_proxy#headers)
+第二个链接是详细的配置规则，文档很多，需要耐心下来慢慢的看才能很好的理解，我第一遍看的很快，完全没懂。吃完午饭之后，拿起手机慢悠悠的，一个句子一个句子的看，这才真的理解
+
+caddy 的配置文件叫 Caddyfile
+
+```bash
+# 代理本地的HTTP服务, eg: "https://example.com" -> localhost:4000
+# 默认下面的Header都已经设置了 X-Forwarded-For X-Forwarded-Proto X-Forwarded-Host
+blog.devsleep.com {
+	reverse_proxy localhost:4000
+}
+
+# 代理HTTPS需要注意修改Host才行
+# header_up是请求时修改Header字段的意思
+blog.devsleep.com {
+  reverse_proxy blog.devsleep.com {
+  	header_up Host {upstream_hostport}
+  }
+}
+```
+
+修改完之后，在 Caddyfile 所在目录运行`caddy reload`就可以重新加载配置了

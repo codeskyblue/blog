@@ -17,9 +17,13 @@ toc: true
 
 4 月使用量
 ![](/images/yuque/Fhyem9Oyi_2vpDrWkCW1u2SuIa0R.png)
+GPT 价格表（需魔法）
+[https://openai.com/pricing](https://openai.com/pricing)
 
 # 打赏记录
 
 | 时间       | From | ￥   |
 | ---------- | ---- | ---- |
 | 2023-04-26 | chau | 1.66 |
+| 2023-04-27 | chau | 66   |
+| 2023-04-28 | Glow | 8.88 |
