@@ -21,10 +21,10 @@ caddy 的文档主要都是英文的
 第二个链接是详细的配置规则，文档很多，需要耐心下来慢慢的看才能很好的理解，我第一遍看的很快，完全没懂。吃完午饭之后，拿起手机慢悠悠的，一个句子一个句子的看，这才真的理解
 
 caddy 的配置文件叫 Caddyfile
+默认的 Header 都已经设置了 X-Forwarded-For X-Forwarded-Proto X-Forwarded-Host
 
 ```bash
 # 代理本地的HTTP服务, eg: "https://example.com" -> localhost:4000
-# 默认下面的Header都已经设置了 X-Forwarded-For X-Forwarded-Proto X-Forwarded-Host
 blog.devsleep.com {
 	reverse_proxy localhost:4000
 }
