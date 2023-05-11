@@ -39,3 +39,41 @@ blog.devsleep.com {
 ```
 
 修改完之后，在 Caddyfile 所在目录运行`caddy reload`就可以重新加载配置了
+
+# 反向代理增加 Basic Auth
+
+第一步需要 hash 一下密码，caddy 不希望我们写明文密码，比如我们的密码是 123456
+
+```bash
+$ caddy hash-password --plaintext 123456
+$2a$14$ZTwlgDTKk38.53Z0QhkuJ.iwmOwnK1ggYs2O8M6eT0ivTwTeVXxVS
+```
+
+修改配置文件 Caddyfile
+后面我们请求的时候，就会需要先输入用户名密码才能访问服务
+
+```groovy
+http://example.com:8080 {
+    basicauth / {
+        # user: rainbow, password: 123456
+	    rainbow $2a$14$ZTwlgDTKk38.53Z0QhkuJ.iwmOwnK1ggYs2O8M6eT0ivTwTeVXxVS
+	}
+	reverse_proxy localhost:8080
+}
+```
+
+# 安装
+
+DEB 安装
+
+```bash
+wget https://github.com/caddyserver/caddy/releases/download/v2.6.4/caddy_2.6.4_linux_amd64.deb
+sudo dpkg -i caddy_2.6.4_linux_amd64.deb
+
+# 控制命令
+systemctl restart caddy
+systemctl reload caddy
+
+# 修改配置文件
+vi /etc/caddy/Caddyfile
+```
