@@ -20,6 +20,7 @@ toc: true
 - BAI Chat [https://chatbot.theb.ai/](https://chatbot.theb.ai/)
 - FreeGPT [https://freegpt.one/](https://freegpt.one/)
 - 需要提供自己的 API KEY [https://niek.github.io/chatgpt-web/](https://niek.github.io/chatgpt-web/)
+- [https://huggingface.co/spaces/yuntian-deng/ChatGPT](https://huggingface.co/spaces/yuntian-deng/ChatGPT)
 
 其他一些人收集的列表
 [https://github.com/humanloop/awesome-chatgpt](https://github.com/humanloop/awesome-chatgpt)

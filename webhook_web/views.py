@@ -21,3 +21,8 @@ async def handle_hook(request: web.Request):
     
     _id = add_history(trigger, request.remote)
     return web.Response(text=f'hook success, id:{_id}')
+
+
+@routes.get("/jobs")
+async def get_jobs():
+    pass

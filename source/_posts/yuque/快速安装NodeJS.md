@@ -15,6 +15,12 @@ curl -o- https://raw.githubusercontent.com/nvm-sh/nvm/v0.39.3/install.sh | bash
 nvm install 16
 ```
 
+更换淘宝镜像
+
+```python
+npm config set registry https://registry.npm.taobao.org
+```
+
 ## 参考
 
 - [https://github.com/nvm-sh/nvm](https://github.com/nvm-sh/nvm)

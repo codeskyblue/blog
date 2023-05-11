@@ -31,6 +31,15 @@ export default defineConfig({
     outDir: "../static",
     emptyOutDir: true,
   },
+  // proxy一般也要配置一下
+  server: {
+    proxy: {
+      "/api": {
+        target: "http://localhost:7001",
+        changeOrigin: true,
+      },
+    },
+  },
   //...
 });
 ```
@@ -52,6 +61,48 @@ def static_file(path: str):
 ```
 
 这样子访问 Index 主页就可以直接加载 vue 编译出来的文件了
+
+# 数据库
+
+一般推荐的都是 SQLAlchemy
+
+```
+sqlalchemy
+pymysql
+```
+
+    下面是个简单的例子通过DB_URL环境变量传递要连接的地址
+
+```python
+from sqlalchemy import create_engine, Column, Integer, String, Boolean, DateTime
+from sqlalchemy.ext.declarative import declarative_base
+from sqlalchemy.orm import sessionmaker
+from datetime import datetime
+import os
+
+db_url = os.getenv("DB_URL")
+if not db_url:
+    raise RuntimeError("DB_URL not set")
+engine = create_engine(db_url)
+
+Base = declarative_base()
+Session = sessionmaker(bind=engine)
+
+def get_session():
+    session = Session()
+    return session
+
+
+class User(Base):
+    __tablename__ = 'user'
+
+    id = Column(Integer, primary_key=True)
+    gmt_create = Column(DateTime, default=datetime.now)
+    gmt_modified = Column(DateTime, default=datetime.now, onupdate=datetime.now)
+    email = Column(String(50), unique=True, nullable=False)
+    password = Column(String(50))
+    admin = Column(Boolean)
+```
 
 # 常用链接
 
