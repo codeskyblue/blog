@@ -26,6 +26,7 @@ Syncthing 有很多的优点
 1. 当对一个文件夹重命名时，同步端会先把原文件夹删除再下载新重命名的文件夹，效率有点慢
 2. iPhone 没有对应的免费客户端
 3. 同步使用 NAS 下 SMB 挂载的目录时，如果直接通过 NAS 添加文件，syncthing 会感知不到文件变化就不同步了。另外也没有带同步端没有强制同步的按钮，不能手动同步。
+4. 不支持懒加载模式，就是需要的时候再下载同步。
 
 # 使用
 
@@ -81,4 +82,19 @@ $ ssh -L 18384:localhost:8384 用户名@Linux的IP
    ![](/images/yuque/FkW5Y7hU9mlsnyU31_d6kN4TOV8Q.png)
 3. 本地浏览器打开[http://localhost:8384](http://localhost:8384)，点击右下角的添加远程设备
    ![](/images/yuque/FgOpMmqeAhSzIRP7bhHbjd-tokQE.png)
-4.
+   ![](/images/yuque/FketS2dfff88lliFyQb-_dkJQI7r.png)
+4. 从 http://localhost:18384 中通过操作->显示设备 ID 拿到的 ID 复制到上一步的弹窗中
+   ![](/images/yuque/Fm3nGPtA2hvTqzLh7XnEtjI168Aj.png)
+5. 两个浏览器都要点击确认一下。之后在界面 Default Folder 设置中的共享中，将要共享的设备勾选一下，两个浏览器再确认一下就完成了。
+
+## 文件版本控制
+
+这是 Syncthing 非常好用的一个功能，如果再 A 机器配置了版本控制，A 机器删除了文件，这个版本控制是不记录的，只有 B 机器删除了文件同步到 A 的时候，A 机器的版本控制才会工作。
+说一下怎么配置吧，在 Linux Syncthing 的控制界面，打开版本控制标签。有很多可以选的。这里就选了一个稍微简单一点的建议版本控制，60 天后清除。最多 5 个版本。
+![](/images/yuque/FuZZ_EPXqygdvG3aHtmODVuIZFFk.png)
+想恢复的时候从这个历史版本里面![](/images/yuque/Fk6ATV-sY6lKwTQfOaT1JhfoZEuR.png)
+找到要恢复的文件，恢复就好了。
+
+# 效果
+
+实际效果啊那是非常的好，比那个 Nextcloud 好用太多了。
