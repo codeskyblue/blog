@@ -66,7 +66,7 @@ build-backend = "poetry_dynamic_versioning.backend"
 [tool.poetry.scripts]
 sshg = "sshg:main"
 
-# 根据tag来动态配置版本号
+# 根据tag来动态配置版本号,tag需要v开头，比如v0.0.1
 [tool.poetry-dynamic-versioning]
 enable = true
 
@@ -103,6 +103,14 @@ poetry build
 ## 创建配置文件
 
 参考配置文件，根据需要修改，下面的文件直接复制到路径`.github/workflows/python-app.yml`
+下面的命令可以方便的完成
+
+```bash
+mkdir -p .github/workflows
+cat > .github/workflows/python-app.yml
+```
+
+下面的内容是要贴过去的内容
 
 ```yaml
 name: Python Package
@@ -179,10 +187,55 @@ jobs:
 [https://pypi.org/manage/account/token/](https://pypi.org/manage/account/token/)
 然后生成的 token 添加到项目的 Repository secrets 中去，下面用图来说明一下
 ![](/images/yuque/Fok0U6cFEi21YOx2dCwYh366P0Bo.png)
-Name 就写 PYPI_TOKEN，Secret 就把刚才生成的 token 帖进去
+Name 就写`PYPI_TOKEN`，Secret 就把刚才生成的 token 帖进去
 ![](/images/yuque/FsTklGo2sSU0AsltR5qH0z0F7sI8.png)
 
-codecov 也需要设置一下变量 CODECOV_TOKEN，进入到指定项目中会有指引，这里就不写了。另外 badge 也可以从网站上直接 Copy 下来。
+# Coverage
+
+[https://codecov.io/](https://codecov.io/) 也需要设置一下变量 CODECOV_TOKEN，进入到指定项目中会有指引，这里就不写了。另外 badge 也可以从网站上直接 Copy 下来。
+pyproject.toml 中新增下面的内容
+
+```toml
+[tool.coverage.run]
+branch = true
+
+[tool.coverage.report]
+# Regexes for lines to exclude from consideration
+exclude_also = [
+    # Don't complain about missing debug-only code:
+    "def __repr__",
+    "if self\\.debug",
+
+    # Don't complain if tests don't hit defensive assertion code:
+    "raise AssertionError",
+    "raise NotImplementedError",
+
+    # Don't complain if non-runnable code isn't run:
+    "if 0:",
+    "if __name__ == .__main__.:",
+
+    # Don't complain about abstract methods, they aren't run:
+    "@(abc\\.)?abstractmethod",
+    ]
+
+ignore_errors = true
+omit = [
+    "tests/*",
+    "docs/*"
+]
+```
+
+有时候需要忽略部分含，可以通过注释来实现
+
+```python
+a = my_function1()
+if debug:  # pragma: no cover
+    msg = "blah blah"
+    log_message(msg, a)
+b = my_function2()
+```
+
+参考：[https://coverage.readthedocs.io/en/latest/config.html](https://coverage.readthedocs.io/en/latest/config.html)
 
 # Badge
 
