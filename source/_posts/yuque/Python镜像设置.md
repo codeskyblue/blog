@@ -49,6 +49,10 @@ export PROXPI_EXTRA_INDEX_TTLS=30
 export PROXPI_CACHE_DIR=$PWD/pypi
 # PROXPI_CACHE_SIZE=5000000000 默认5G，这个可以不用改
 
+# 强制contentType为application/octet-stream
+# 这个必须要加，不然poetry会把tar.gz认为是tar文件，导致hash错误
+PROXPI_BINARY_FILE_MIME_TYPE=1
+
 # 启动服务
 FLASK_APP=proxpi.server flask run --port 31415
 ```

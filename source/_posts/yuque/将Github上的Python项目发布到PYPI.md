@@ -242,7 +242,7 @@ b = my_function2()
 这是个好东西，可以直接展示覆盖率，最新版本号之类的东东
 比如
 ![](/images/yuque/Fp7tEetijw_XVg5hof4lR72ysY3o.png)
-[https://badge.fury.io/](https://badge.fury.io/)
+[https://badge.fury.io/for/py](https://badge.fury.io/for/py)
 通过这个网站就可以快速生成你需要的 badge，使用体验很好
 
 ## 参考

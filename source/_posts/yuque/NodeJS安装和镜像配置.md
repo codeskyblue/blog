@@ -1,5 +1,5 @@
 ---
-title: 快速安装NodeJS
+title: NodeJS安装和镜像配置
 urlname: rvmf4lg0a0fgf4to
 date: '2023-05-04 19:56:45 +0800'
 tags: []
