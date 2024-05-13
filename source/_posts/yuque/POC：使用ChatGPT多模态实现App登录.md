@@ -1,6 +1,6 @@
 ---
 title: POC：使用ChatGPT多模态实现App登录
-urlname: grhu3465pgigc6na
+urlname: gpt_generate_app_login_script
 date: '2024-05-13 14:27:38 +0800'
 tags: []
 categories: []

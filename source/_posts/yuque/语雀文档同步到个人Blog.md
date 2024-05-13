@@ -1,6 +1,6 @@
 ---
 title: 语雀文档同步到个人Blog
-urlname: any1s4wcvpwonlsa
+urlname: yuque_sync_to_hexo
 date: '2023-04-18 23:02:46 +0800'
 tags:
   - 语雀
@@ -18,8 +18,8 @@ toc: true
 
 <!-- more -->
 
-因为改了很多东西，为了方便，可以直接[fork 我的项目 codeskyblue/hexo-blog-template](https://github.com/codeskyblue/hexo-blog-template/fork)
-Fork 完之后，git clone 到本地
+因为改了很多东西，为了方便，我的博客地址是 <https://github.com/codeskyblue/blog> 可以参考一下
+如果 Fork 的话，git clone 到本地
 
 1. 修改配置文件 `_config.yml`中的 title, author, url 字段，改成自己的
 2. 将 source 目录直接删掉（不用担心，yuque 同步的时候还会自动创建）
