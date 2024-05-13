@@ -8,6 +8,18 @@ toc: true
 ---
 
 写了一个脚本方便一键扩容虚拟分区
+简单版本
+
+```bash
+swapoff -a
+dd if=/dev/zero of=/swapfile bs=1M count=2000
+chmod 600 /swapfile
+mkswap /swapfile
+swapon /swapfile
+grep SwapTotal /proc/meminfo
+```
+
+复杂版本
 
 ```bash
 #!/bin/bash
@@ -30,7 +42,7 @@ then
 fi
 
 swapoff -a
-dd if=/dev/zero of=/swapfile bs=1G count=${SWAPFILE_SIZE_GB}
+dd if=/dev/zero of=/swapfile bs=1G count=${SWAPFILE_SIZE_GB:-8}
 chmod 600 /swapfile
 mkswap /swapfile
 swapon /swapfile
